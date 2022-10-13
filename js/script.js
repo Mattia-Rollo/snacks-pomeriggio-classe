@@ -44,16 +44,27 @@
 const input = document.querySelector('input');
 
 function creoArray () {
+    //prendo il vnumero che utente inserisce
     let numeroUtente = parseInt(input.value);
     console.log(numeroUtente);
+    let lista = [];
+    //
     for (let i = 0; i < numeroUtente; i++){
-        let lista = [];
+        lista[i] = [];
         contatore = 10;
-        while(lista.length < 10) {
-            lista.push(Math.floor(Math.random() * 100) + 1);
-            console.log(lista);
+        // console.log(lista);
+        while(lista[i].length < 10) {
+            lista[i].push(Math.floor(Math.random() * 100) + 1);
+
         }
+        
+        console.log('lista ' + i + ' : ' + lista[i]);
+        // console.log(lista);
     }
+    console.log(lista);
+    // console.log('lista ' + 1 + ' : ' + lista[0],'lista ' + 2 + ' : ' + lista[1]);
+    // console.log('lista 1 primo E: ' + lista[0,0]);
+    // console.log('lista 2 primo E: ' + lista[1,0]);
 }
 
 input.addEventListener('change', creoArray);
