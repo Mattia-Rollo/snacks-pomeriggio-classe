@@ -41,27 +41,35 @@
 // input.addEventListener('change', aggiungiNumero);
 
 
+
+
+//esercizio facoltativo iserito da gabriel dopo le 18:00
+// Fai inserire un numero, che chiameremo N, all’utente.
+// Genera N array, ognuno formato da 10 numeri casuali da 1 a 100.
+// Ogni volta che ne crei uno, stampalo.
+
 const input = document.querySelector('input');
 
 function creoArray () {
-    //prendo il vnumero che utente inserisce
+    // prendo il vnumero che utente inserisce
     let numeroUtente = parseInt(input.value);
     console.log(numeroUtente);
     let lista = [];
-    //
+    
     for (let i = 0; i < numeroUtente; i++){
         lista[i] = [];
         contatore = 10;
-        // console.log(lista);
+        console.log(lista[i]);
+        console.log(lista);
         while(lista[i].length < 10) {
             lista[i].push(Math.floor(Math.random() * 100) + 1);
 
         }
         
-        console.log('lista ' + i + ' : ' + lista[i]);
+        // console.log('lista ' + i + ' : ' + lista[i]);
         // console.log(lista);
     }
-    console.log(lista);
+    console.log(lista[3][0]);
     // console.log('lista ' + 1 + ' : ' + lista[0],'lista ' + 2 + ' : ' + lista[1]);
     // console.log('lista 1 primo E: ' + lista[0,0]);
     // console.log('lista 2 primo E: ' + lista[1,0]);
