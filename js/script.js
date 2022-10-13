@@ -69,10 +69,12 @@ function creoArray () {
         // console.log('lista ' + i + ' : ' + lista[i]);
         // console.log(lista);
     }
-    console.log(lista[3][0]);
-    // console.log('lista ' + 1 + ' : ' + lista[0],'lista ' + 2 + ' : ' + lista[1]);
-    // console.log('lista 1 primo E: ' + lista[0,0]);
-    // console.log('lista 2 primo E: ' + lista[1,0]);
+    //provo a stampare un elemento della quarta lista alla prima posizione
+    console.log(lista[lista.length-1][0]);
+    
 }
 
 input.addEventListener('change', creoArray);
+
+
+
