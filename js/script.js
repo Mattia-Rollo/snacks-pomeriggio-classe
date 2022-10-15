@@ -51,16 +51,17 @@
 const input = document.querySelector('input');
 
 function creoArray () {
-    // prendo il vnumero che utente inserisce
+    // prendo il numero che utente inserisce
     let numeroUtente = parseInt(input.value);
-    console.log(numeroUtente);
+    // console.log(numeroUtente);
     let lista = [];
     
     for (let i = 0; i < numeroUtente; i++){
+        //creo e aggiungo degli array all'array principale 'array multidimensionale'
         lista[i] = [];
-        // contatore = 10;
         console.log(lista[i]);
         console.log(lista);
+        //aggiungo 10 numeri casuali tra a e 100 al singolo array  
         while(lista[i].length < 10) {
             lista[i].push(Math.floor(Math.random() * 100) + 1);
 
