@@ -77,7 +77,7 @@
 // input.addEventListener('change', creoArray);
 
 
-const lista = [];
+const listaNumeri = [];
 const contatore = 10;
 
 
@@ -91,17 +91,20 @@ function isInList(array,num) {
     }
     return check;
 }
+let contaLoop = 0;
 
-while(lista.length < contatore) {
+while(listaNumeri.length < contatore) {
     let numero = Math.floor(Math.random() * 10) + 1;
     console.log(numero);
-    console.log(!isInList(lista,numero));
-    if(!isInList(lista,numero)){
-        lista[lista.length] = numero;
+    console.log(!isInList(listaNumeri,numero));
+    if(!isInList(listaNumeri,numero)){
+        listaNumeri[listaNumeri.length] = numero;
     }
+    contaLoop++;
+    console.log('loops n:' + contaLoop.toString())
 }
 
-console.log(lista);
+console.log(listaNumeri);
 
 
 /*
@@ -111,7 +114,7 @@ se il numero è più alto di quello successivo si cambia di posizione
 altrimenti rimane li
 
 */
-mettiInOrdine(lista);
+mettiInOrdine(listaNumeri);
 
 
 
@@ -125,7 +128,7 @@ mettiInOrdine(lista);
 //     }
 // }
 // }
-console.log(lista);
+console.log(listaNumeri);
 // for(let i = listaRandom.length; i > 0; i--){
 //     let elemento = listaRandom[i];
 //     let secondoElemento = listaRandom[i+1];
@@ -138,7 +141,7 @@ console.log(lista);
 
 const wrapper = document.getElementById('wrapper');
 
-console.log('la lista random: ' + lista);
+console.log('la listaNumeri riordinata: ' + listaNumeri);
 
 function mettiInOrdine(listaRandom) {
 
