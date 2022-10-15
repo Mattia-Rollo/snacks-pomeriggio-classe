@@ -78,13 +78,34 @@
 
 
 const lista = [];
-const contatore = 20;
+const contatore = 5;
+
+
+function isInList(array,num) {
+    let check = false;
+    for(let i = 0; i < array.length; i++){
+        if(num === array[i]){
+            check = true;
+        }else {
+            check = false;
+        }
+        
+    }
+    return check;
+}
 
 while(lista.length < contatore) {
-    let numero = Math.floor(Math.random() * 100) + 1;
-    lista[lista.length] = numero;
+    let numero = Math.floor(Math.random() * 8) + 1;
+    console.log(numero);
+    console.log(!isInList(lista,numero));
+    if(!isInList(lista,numero)){
+        lista[lista.length] = numero;
+    }
 }
+
 console.log(lista);
+
+
 /*
 
 prendo il primo numero dell'array e lo confronto con gli altri 
