@@ -75,6 +75,7 @@ function creoArray () {
         //aggiungo 10 numeri casuali tra a e 100 al singolo array  
         while(lista[i].length < 10) {
             let numero = Math.floor(Math.random() * 100) + 1;
+            //uso la funzione isInList() per evitare numeri doppi
             if(!isInList(lista[i],numero)){
                 myPushArray(lista[i],numero);
             }
