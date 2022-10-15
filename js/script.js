@@ -77,13 +77,60 @@
 // input.addEventListener('change', creoArray);
 
 
-const listaRandom = [];
-const contatore = 10;
+const lista = [];
+const contatore = 20;
 
-while(listaRandom.length < 10) {
+while(lista.length < contatore) {
     let numero = Math.floor(Math.random() * 100) + 1;
-    listaRandom.push(numero);
-    
+    lista[lista.length] = numero;
 }
+console.log(lista);
+/*
 
-console.log('la lista random: ' + listaRandom.sort());
+prendo il primo numero dell'array e lo confronto con gli altri 
+se il numero è più alto di quello successivo si cambia di posizione
+altrimenti rimane li
+
+*/
+mettiInOrdine(lista);
+
+
+
+// for(let a = 0; a < listaRandom.length; a++){
+// for(let i = 0; i < listaRandom.length; i++){
+//     let elemento = listaRandom[i];
+//     let secondoElemento = listaRandom[i+1];
+//     if (elemento > secondoElemento) {
+//         listaRandom[i] = secondoElemento;
+//         listaRandom[i+1] = elemento;
+//     }
+// }
+// }
+console.log(lista);
+// for(let i = listaRandom.length; i > 0; i--){
+//     let elemento = listaRandom[i];
+//     let secondoElemento = listaRandom[i+1];
+//     if (elemento < secondoElemento) {
+//         listaRandom[i] = secondoElemento;
+//         listaRandom[i+1] = elemento;
+//     }
+// }
+
+
+const wrapper = document.getElementById('wrapper');
+
+console.log('la lista random: ' + lista);
+
+function mettiInOrdine(listaRandom) {
+
+    for(let a = 0; a < listaRandom.length; a++){
+        for(let i = 0; i < listaRandom.length; i++){
+            let elemento = listaRandom[i];
+            let secondoElemento = listaRandom[i+1];
+            if (elemento > secondoElemento) {
+                listaRandom[i] = secondoElemento;
+                listaRandom[i+1] = elemento;
+            }
+        }
+        }
+}
