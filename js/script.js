@@ -49,14 +49,10 @@
 // Ogni volta che ne crei uno, stampalo.
 
 
-// creo una finzione simile a array.push() 
+// creo una funzione simile a array.push() 
 function myPushArray(array,elem) {
     array[array.length] = elem;
 }
-
-
-
-
 
 
 const input = document.querySelector('input');
