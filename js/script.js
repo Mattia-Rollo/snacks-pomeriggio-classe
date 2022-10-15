@@ -12,7 +12,7 @@
 
 // function aggiungiNumero () {
 
-//     //prendo il valore del input
+// //     //prendo il valore del input
 //     let numeroUtente = parseInt(input.value);
 
 
@@ -48,33 +48,33 @@
 // Genera N array, ognuno formato da 10 numeri casuali da 1 a 100.
 // Ogni volta che ne crei uno, stampalo.
 
-// const input = document.querySelector('input');
+const input = document.querySelector('input');
 
-// function creoArray () {
-//     // prendo il vnumero che utente inserisce
-//     let numeroUtente = parseInt(input.value);
-//     console.log(numeroUtente);
-//     let lista = [];
+function creoArray () {
+    // prendo il vnumero che utente inserisce
+    let numeroUtente = parseInt(input.value);
+    console.log(numeroUtente);
+    let lista = [];
     
-//     for (let i = 0; i < numeroUtente; i++){
-//         lista[i] = [];
-//         contatore = 10;
-//         console.log(lista[i]);
-//         console.log(lista);
-//         while(lista[i].length < 10) {
-//             lista[i].push(Math.floor(Math.random() * 100) + 1);
+    for (let i = 0; i < numeroUtente; i++){
+        lista[i] = [];
+        // contatore = 10;
+        console.log(lista[i]);
+        console.log(lista);
+        while(lista[i].length < 10) {
+            lista[i].push(Math.floor(Math.random() * 100) + 1);
 
-//         }
+        }
         
-//         // console.log('lista ' + i + ' : ' + lista[i]);
-//         // console.log(lista);
-//     }
-//     //provo a stampare un elemento della quarta lista alla prima posizione
-//     console.log(lista[lista.length-1][0]);
+        // console.log('lista ' + i + ' : ' + lista[i]);
+        // console.log(lista);
+    }
+    //provo a stampare un elemento della quarta lista alla prima posizione
+    console.log(lista[lista.length-1][0]);
     
-// }
+}
 
-// input.addEventListener('change', creoArray);
+input.addEventListener('change', creoArray);
 
 
 const listaNumeri = [];
