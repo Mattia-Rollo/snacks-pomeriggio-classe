@@ -76,7 +76,7 @@ function creoArray () {
                 myPushArray(lista[i],numero);
             }
             
-            console.log('loops n:' + contaLoop.toString())
+            // console.log('loops n:' + contaLoop.toString())
         }
         
         
@@ -177,3 +177,7 @@ function mettiInOrdine(listaRandom) {
     return listaRandom;
 }
 
+
+
+const listaProva = [];
+listaProva[listaProva.length] = [];
