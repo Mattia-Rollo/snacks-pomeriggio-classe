@@ -48,6 +48,15 @@
 // Genera N array, ognuno formato da 10 numeri casuali da 1 a 100.
 // Ogni volta che ne crei uno, stampalo.
 
+function myPushArray(array,elem) {
+    array[array.length] = elem;
+}
+
+
+
+
+
+
 const input = document.querySelector('input');
 
 function creoArray () {
@@ -63,17 +72,24 @@ function creoArray () {
         console.log(lista);
         //aggiungo 10 numeri casuali tra a e 100 al singolo array  
         while(lista[i].length < 10) {
-            lista[i].push(Math.floor(Math.random() * 100) + 1);
-
+            let numero = Math.floor(Math.random() * 100) + 1;
+            if(!isInList(lista[i],numero)){
+                myPushArray(lista[i],numero);
+            }
+            contaLoop++;
+            console.log('loops n:' + contaLoop.toString())
         }
+        
         
         // console.log('lista ' + i + ' : ' + lista[i]);
         // console.log(lista);
     }
-    //provo a stampare un elemento della quarta lista alla prima posizione
-    console.log(mettiInOrdine(lista[0]));
-    
+    //stampo ogni  presente nella lista
+    for(let i = 0; i < lista.length; i++) {
+        console.log(mettiInOrdine(lista[i]));
+    }
 }
+
 
 input.addEventListener('change', creoArray);
 
