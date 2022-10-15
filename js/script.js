@@ -71,7 +71,7 @@ function creoArray () {
         // console.log(lista);
     }
     //provo a stampare un elemento della quarta lista alla prima posizione
-    console.log(lista[lista.length-1][0]);
+    console.log(mettiInOrdine(lista[0]));
     
 }
 
@@ -88,7 +88,6 @@ function isInList(array,num) {
         if(num === array[i]){
             check = true;
         }
-        
     }
     return check;
 }
@@ -155,5 +154,6 @@ function mettiInOrdine(listaRandom) {
                 listaRandom[i+1] = elemento;
             }
         }
-        }
+    }
+    return listaRandom;
 }
