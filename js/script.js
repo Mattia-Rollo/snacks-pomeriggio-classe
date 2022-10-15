@@ -75,7 +75,7 @@ function creoArray () {
             if(!isInList(lista[i],numero)){
                 myPushArray(lista[i],numero);
             }
-            contaLoop++;
+            
             console.log('loops n:' + contaLoop.toString())
         }
         
@@ -103,6 +103,10 @@ function isInList(array,num) {
         if(num === array[i]){
             check = true;
         }
+        //ATTENZIONE mettere un else qui è un problema
+        //perchè anche se dovesse trovare l'elemento nella lista
+        //quando poi lo confronta con quello successivo siccome non sono uguali ritorna false
+        // sse dovesse esserci un else check=false ATTENZIONE
     }
     return check;
 }
@@ -172,3 +176,4 @@ function mettiInOrdine(listaRandom) {
     }
     return listaRandom;
 }
+
