@@ -81,40 +81,25 @@ const lista = [];
 const contatore = 10;
 
 
-// function isInList(array,num) {
-//     let check = false;
-//     for(let i = 0; i < array.length; i++){
-//         if(num === array[i]){
-//             check = true;
-//         }else {
-//             check = false;
-//         }
+function isInList(array,num) {
+    let check = false;
+    for(let i = 0; i < array.length; i++){
+        if(num === array[i]){
+            check = true;
+        }
         
-//     }
-//     return check;
-// }
+    }
+    return check;
+}
 
 while(lista.length < contatore) {
     let numero = Math.floor(Math.random() * 10) + 1;
     console.log(numero);
-    // console.log(!isInList(lista,numero));
-    // console.log(lista)
-    let check = false;
-    for(let i = 0; i < lista.length; i++){
-        console.log(lista,numero);
-        if(numero === lista[i]){
-            check = true;
-        }
-        
-        console.log(check);
-    }
-    if(!check){
+    console.log(!isInList(lista,numero));
+    if(!isInList(lista,numero)){
         lista[lista.length] = numero;
     }
 }
-
-
-
 
 console.log(lista);
 
